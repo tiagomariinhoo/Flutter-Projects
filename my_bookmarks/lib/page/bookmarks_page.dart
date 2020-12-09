@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_bookmarks/model/bookmark.dart';
+import 'package:my_bookmarks/util/navigation_util.dart';
 import 'package:my_bookmarks/widget/bookmarks_list_widget.dart';
 
 import 'add_bookmark_page.dart';
@@ -21,7 +22,7 @@ class BookmarksPage extends StatelessWidget {
       floatingActionButton: FloatingActionButton.extended(
         icon: Icon(Icons.add),
         onPressed: () {
-          Navigator.of(context).push(MaterialPageRoute(builder: _onFABPressed));
+          navigateToAddBookmarkPage(context);
         },
         label: Text("Add"),
       ),
